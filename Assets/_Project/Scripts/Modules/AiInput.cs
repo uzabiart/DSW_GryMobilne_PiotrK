@@ -5,7 +5,7 @@ using UnityEngine;
 public class AiInput : MonoBehaviour
 {
     public Move move;
-    public Player player;
+    private Player player;
 
     private void Start()
     {
@@ -14,6 +14,7 @@ public class AiInput : MonoBehaviour
 
     private void Update()
     {
-        move.MoveTowards(new Vector2(0, -0.01f));
+        if (move == null) return;
+        move.MoveTowards(player.transform.position);
     }
 }

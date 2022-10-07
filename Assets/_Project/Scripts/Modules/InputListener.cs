@@ -10,19 +10,19 @@ public class InputListener : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            move.MoveTowards(new Vector2(0, 0.01f));
+            move.MoveTo(new Vector2(0, 0.01f));
         }
         if (Input.GetKey(KeyCode.S))
         {
-            move.MoveTowards(new Vector2(0, -0.01f));
+            move.MoveTo(new Vector2(0, -0.01f));
         }
         if (Input.GetKey(KeyCode.D))
         {
-            move.MoveTowards(new Vector2(0.01f, 0));
+            move.MoveTo(new Vector2(0.01f, 0));
         }
         if (Input.GetKey(KeyCode.A))
         {
-            move.MoveTowards(new Vector2(-0.01f, 0));
+            move.MoveTo(new Vector2(-0.01f, 0));
         }
     }
 }
