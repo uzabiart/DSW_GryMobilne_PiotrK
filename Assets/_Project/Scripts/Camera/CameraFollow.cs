@@ -11,6 +11,7 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Small change");
         camera = FindObjectOfType<Camera>();
         player = FindObjectOfType<Player>();
     }
