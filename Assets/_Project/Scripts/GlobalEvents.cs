@@ -12,3 +12,8 @@ public class GameplayEvents
 {
     public static Action<Vector2> PlayerInput;
 }
+
+public class UIEvents
+{
+    public static Action<PopupInfo> OnShowMessage;
+}
