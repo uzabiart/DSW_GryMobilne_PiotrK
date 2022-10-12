@@ -11,9 +11,11 @@ public class GlobalEvents
 public class GameplayEvents
 {
     public static Action<Vector2> PlayerInput;
+    public static Action<ItemData> OnItemPickup;
 }
 
 public class UIEvents
 {
     public static Action<PopupInfo> OnShowMessage;
+    public static Action OpenInventory;
 }
