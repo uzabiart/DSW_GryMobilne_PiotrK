@@ -43,7 +43,7 @@ public class JumpAction : ICommand
     }
     public void Undo()
     {
-        Debug.Log("Undo Jump action");
+        Debug.Log("Undo Jumps action");
     }
 }
 
