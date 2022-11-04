@@ -37,7 +37,7 @@ public class PopupLogic : MonoBehaviour
 
 public class PopupInfo
 {
-    public PopupInfo(string message, float delayInSeconds)
+    public PopupInfo(string message, float delayInSeconds = 2f)
     {
         this.message = message;
         this.delayInSeconds = delayInSeconds;
