@@ -5,24 +5,33 @@ using UnityEngine;
 public class InputListener : MonoBehaviour
 {
     public Move move;
+    public KeyCode up;
+    public KeyCode down;
+    public KeyCode left;
+    public KeyCode right;
+    public KeyCode jump;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(up))
         {
-            move.MoveTo(new Vector2(0, 1f));
+            move.OnMove(new Vector2(0, 1f));
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(down))
         {
-            move.MoveTo(new Vector2(0, -1f));
+            move.OnMove(new Vector2(0, -1f));
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(right))
         {
-            move.MoveTo(new Vector2(1f, 0));
+            move.OnMove(new Vector2(1f, 0));
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(left))
         {
-            move.MoveTo(new Vector2(-1f, 0));
+            move.OnMove(new Vector2(-1f, 0));
+        }
+        if (Input.GetKeyDown(jump))
+        {
+            move.OnJump();
         }
     }
 }
