@@ -5,7 +5,10 @@ using System;
 
 public class GlobalEvents
 {
+    public static Action OnSpacebarHit;
     public static Action OnEnable;
+
+    public static Action OnGameplayStateChange;
 }
 
 public class GameplayEvents
@@ -18,4 +21,7 @@ public class UIEvents
 {
     public static Action<PopupInfo> OnShowMessage;
     public static Action OpenInventory;
+
+    public static Action OnUIRefresh;
+    public static Action OnDebugButtonClick;
 }
