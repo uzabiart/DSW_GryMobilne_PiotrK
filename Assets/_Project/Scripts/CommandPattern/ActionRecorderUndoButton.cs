@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class ActionRecorderUndoButton : MonoBehaviour
 {
-    public void OnClick()
+    public void UndoClick()
     {
         ActionRecorder.Undo();
+    }
+
+    public void ReplayClick()
+    {
+        ActionRecorder.Replay();
     }
 }

@@ -8,11 +8,6 @@ public class Move : Module
     private Transform movable;
     public ActionRecorder actionRecorder = new ActionRecorder();
 
-    private void Start()
-    {
-        movable = entity.transform;
-    }
-
     public void OnMove(Vector2 moveTo)
     {
         ActionRecorder.Record(new MoveAction(this, moveTo));
@@ -32,6 +27,10 @@ public class Move : Module
         movable.DOPunchPosition(new Vector3(0, 0.5f, 0), 0.1f);
     }
 
+    private void Start()
+    {
+        movable = entity.transform;
+    }
     public void MoveTowards(Vector3 target)
     {
         float dist = Vector3.Distance(movable.position, target);
@@ -60,7 +59,6 @@ public class MoveAction : CommandBase
     {
         unit.MoveTo(newPos);
     }
-
     public override void Undo()
     {
         unit.MoveTo(newPos * -1);
@@ -80,7 +78,6 @@ public class JumpAction : CommandBase
     {
         unit.Jump();
     }
-
     public override void Undo()
     {
         unit.Jump();
