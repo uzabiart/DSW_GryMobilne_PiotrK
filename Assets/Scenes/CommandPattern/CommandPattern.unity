@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!212 &5172916 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9177536777502917769, guid: 5b211263ed61bb04bb5907e19d616f60, type: 3}
+  m_PrefabInstance: {fileID: 66639604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &16790325
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +253,10 @@ PrefabInstance:
       propertyPath: right
       value: 275
       objectReference: {fileID: 0}
+    - target: {fileID: 7043055202006872597, guid: 5b211263ed61bb04bb5907e19d616f60, type: 3}
+      propertyPath: changeColor
+      value: 257
+      objectReference: {fileID: 0}
     - target: {fileID: 8946782053557601833, guid: 5b211263ed61bb04bb5907e19d616f60, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -316,6 +325,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9177536779176306102, guid: 5b211263ed61bb04bb5907e19d616f60, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 5172916}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b211263ed61bb04bb5907e19d616f60, type: 3}
 --- !u!1 &156862173
@@ -1454,6 +1467,10 @@ PrefabInstance:
       propertyPath: right
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 7043055202006872597, guid: 5b211263ed61bb04bb5907e19d616f60, type: 3}
+      propertyPath: changeColor
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 8946782053557601833, guid: 5b211263ed61bb04bb5907e19d616f60, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1510,6 +1527,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9177536779176306102, guid: 5b211263ed61bb04bb5907e19d616f60, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 1221448299}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b211263ed61bb04bb5907e19d616f60, type: 3}
 --- !u!1 &691931784
@@ -2206,6 +2227,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!212 &1221448299 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9177536777502917769, guid: 5b211263ed61bb04bb5907e19d616f60, type: 3}
+  m_PrefabInstance: {fileID: 672732859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1229801622
 GameObject:
   m_ObjectHideFlags: 0

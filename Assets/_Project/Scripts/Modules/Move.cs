@@ -5,8 +5,8 @@ using DG.Tweening;
 
 public class Move : Module
 {
+    public SpriteRenderer sprite;
     private Transform movable;
-    public ActionRecorder actionRecorder = new ActionRecorder();
 
     public void OnMove(Vector2 moveTo)
     {
@@ -15,6 +15,11 @@ public class Move : Module
     public void OnJump()
     {
         ActionRecorder.Record(new JumpAction(this));
+    }
+    public void OnChangeColor()
+    {
+        float randomAlpha = UnityEngine.Random.Range(0f, 1f);
+        ActionRecorder.Record(new ChangeColorAction(this, randomAlpha));
     }
 
     public void MoveTo(Vector2 moveTo)
@@ -25,6 +30,11 @@ public class Move : Module
     public void Jump()
     {
         movable.DOPunchPosition(new Vector3(0, 0.5f, 0), 0.1f);
+    }
+
+    public void ChangeColor(float alpha)
+    {
+        sprite.DOFade(alpha, 0.1f);
     }
 
     private void Start()
@@ -81,5 +91,27 @@ public class JumpAction : CommandBase
     public override void Undo()
     {
         unit.Jump();
+    }
+}
+
+public class ChangeColorAction : CommandBase
+{
+    public ChangeColorAction(Move unit, float alpha)
+    {
+        this.unit = unit;
+        this.alpha = alpha;
+    }
+
+    public Move unit;
+    public float alpha;
+
+    public override void Execute()
+    {
+        unit.ChangeColor(alpha);
+    }
+
+    public override void Undo()
+    {
+        unit.ChangeColor(alpha);
     }
 }

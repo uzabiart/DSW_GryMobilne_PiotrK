@@ -10,6 +10,7 @@ public class InputListener : MonoBehaviour
     public KeyCode left;
     public KeyCode right;
     public KeyCode jump;
+    public KeyCode changeColor;
 
     void Update()
     {
@@ -32,6 +33,10 @@ public class InputListener : MonoBehaviour
         if (Input.GetKeyDown(jump))
         {
             move.OnJump();
+        }
+        if (Input.GetKeyDown(changeColor))
+        {
+            move.OnChangeColor();
         }
     }
 }
