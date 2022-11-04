@@ -8,21 +8,21 @@ public class InputListener : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            move.MoveTo(new Vector2(0, 0.01f));
+            move.MoveTo(new Vector2(0, 1f));
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            move.MoveTo(new Vector2(0, -0.01f));
+            move.MoveTo(new Vector2(0, -1f));
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
-            move.MoveTo(new Vector2(0.01f, 0));
+            move.MoveTo(new Vector2(1f, 0));
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
-            move.MoveTo(new Vector2(-0.01f, 0));
+            move.MoveTo(new Vector2(-1f, 0));
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DebugExample : MonoBehaviour
+public class InheritanceExample : MonoBehaviour
 {
     public Animal lion;
     public Animal trex;
