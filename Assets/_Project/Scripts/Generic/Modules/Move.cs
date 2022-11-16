@@ -48,12 +48,14 @@ public class Move : Module
     }
 }
 
+[System.Serializable]
 public abstract class CommandBase
 {
     public abstract void Undo();
     public abstract void Execute();
 }
 
+[System.Serializable]
 public class MoveAction : CommandBase
 {
     public MoveAction(Move unit, Vector2 newPos)
@@ -75,6 +77,7 @@ public class MoveAction : CommandBase
     }
 }
 
+[System.Serializable]
 public class JumpAction : CommandBase
 {
     public Move unit;
@@ -94,6 +97,7 @@ public class JumpAction : CommandBase
     }
 }
 
+[System.Serializable]
 public class ChangeColorAction : CommandBase
 {
     public ChangeColorAction(Move unit, float alpha)

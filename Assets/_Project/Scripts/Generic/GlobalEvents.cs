@@ -15,6 +15,9 @@ public class GameplayEvents
 {
     public static Action<Vector2> PlayerInput;
     public static Action<ItemData> OnItemPickup;
+
+    public static Action OnSaveGame;
+    public static Action OnLoadGame;
 }
 
 public class UIEvents

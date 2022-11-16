@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,13 @@ public class Health : Module
         UpdateView();
     }
 
+    private void Update()
+    {
+        if (fillBar.fillAmount != (float)currentHealth / (float)maxHealth)
+            UpdateView();
+    }
+
+    [Button]
     public void TakeDamage(int damage)
     {
         Debug.Log($"{entity.gameObject.name} took damage: {damage}");
@@ -22,8 +30,11 @@ public class Health : Module
         if (currentHealth <= 0) Destroy(entity.gameObject);
         UpdateView();
     }
+    [Button]
     public void Heal(int heal)
     {
+        currentHealth += heal;
+        UpdateView();
     }
 
     public void UpdateView()
