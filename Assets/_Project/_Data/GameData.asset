@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   playerData:
-    health: 55555
-    gold: 5
+    health: 14
+    gold: 9
     armor: 1
-    playerName: Bob
-    position: {x: 5, y: 4}
-    ammo: 15
+    playerName: John
+    position: {x: 0, y: 0}
+    ammo: 2
   CurrentGameState: 5
   PreviousGameState: 5

@@ -18,6 +18,8 @@ public class GameData : ScriptableObject
     public static GameData Instance;
     public PlayerData playerData;
 
+    public static UserData UserData = new UserData();
+
     public EGameState CurrentGameState = EGameState.None;
     public EGameState PreviousGameState = EGameState.None;
 
@@ -35,4 +37,10 @@ public class GameData : ScriptableObject
         GlobalEvents.OnGameplayStateChange?.Invoke();
         PreviousGameState = newGameState;
     }
+}
+
+[System.Serializable]
+public class UserData
+{
+    public string userId;
 }

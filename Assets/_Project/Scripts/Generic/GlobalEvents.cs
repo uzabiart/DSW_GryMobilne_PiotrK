@@ -28,3 +28,9 @@ public class UIEvents
     public static Action OnUIRefresh;
     public static Action OnDebugButtonClick;
 }
+
+public class OnlineEvents
+{
+    public static Action OnServerInit;
+    public static Action OnUserLogIn;
+}

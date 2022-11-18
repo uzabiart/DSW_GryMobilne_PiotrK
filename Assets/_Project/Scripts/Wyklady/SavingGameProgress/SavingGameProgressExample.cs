@@ -26,7 +26,7 @@ public class SavingGameProgressExample : MonoBehaviour
     public void SaveProgress()
     {
         GameplayEvents.OnSaveGame?.Invoke();
-        //PlayerSavedData.SavedPlayer = currentPlayer;
+        PlayerSavedData.SavedPlayer = currentPlayer;
         Refresh();
     }
     public void LoadProgress()
