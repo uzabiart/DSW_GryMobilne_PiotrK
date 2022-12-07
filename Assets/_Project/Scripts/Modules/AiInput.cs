@@ -14,6 +14,7 @@ public class AiInput : MonoBehaviour
 
     private void Update()
     {
+        if (player == null) return;
         if (move == null) return;
         move.MoveTowards(player.transform.position);
     }

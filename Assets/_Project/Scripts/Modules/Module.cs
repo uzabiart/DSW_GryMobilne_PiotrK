@@ -7,7 +7,7 @@ public class Module : MonoBehaviour
     [HideInInspector]
     public Entity entity;
 
-    protected void Awake()
+    protected virtual void Awake()
     {
         entity = GetComponentInParent<Entity>();
     }

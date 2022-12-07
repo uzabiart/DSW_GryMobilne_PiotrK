@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class Health : Module
     public int maxHealth;
     public int currentHealth;
     public Image fillBar;
+    public Action onDestroy;
 
     private void Start()
     {
@@ -19,7 +21,7 @@ public class Health : Module
     {
         Debug.Log($"{entity.gameObject.name} took damage: {damage}");
         currentHealth -= damage;
-        if (currentHealth <= 0) Destroy(entity.gameObject);
+        if (currentHealth <= 0) { onDestroy?.Invoke(); Destroy(entity.gameObject); return; }
         UpdateView();
     }
     public void Heal(int heal)
