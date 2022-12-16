@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,15 @@ using UnityEngine.UI;
 
 public class OptimizationExamples : MonoBehaviour
 {
-    private void Update()
-    {
-    }
+    public GameObject obj;
 
-    public void Debug()
+    [Button]
+    public void DebugMethod()
     {
+        for (int i = 0; i < 5000; i++)
+        {
+            Instantiate(obj, transform);
+        }
     }
 }
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RocketLauncher : Weapon, ISight, IMagazine
+public class RocketLauncher : ItemS, ISight, IMagazine
 {
     public override int damage => 20;
 

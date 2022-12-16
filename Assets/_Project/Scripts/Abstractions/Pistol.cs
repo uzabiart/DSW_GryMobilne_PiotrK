@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pistol : Weapon, ISight
+public class Pistol : ItemS, ISight
 {
     public override int damage { get => 1; }
 
